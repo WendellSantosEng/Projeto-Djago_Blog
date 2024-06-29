@@ -1,0 +1,15 @@
+Remove todos os containers
+docker rm -f $(docker ps -aq) 
+
+Recriar container
+docker-compose up --build --force-recreate
+
+Remover Cache e recriar
+docker-compose down --volumes --remove-orphans
+docker-compose up --build
+
+
+Comandos no container
+
+abre um shell pra enviar comandos no container
+docker exec -it djangoapp /bin/sh
