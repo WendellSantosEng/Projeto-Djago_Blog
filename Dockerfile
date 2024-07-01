@@ -5,10 +5,10 @@ FROM python:3.11.3-alpine3.18
 LABEL maintainer="wendellsdev@gmail.com"
 
 # Variável de ambiente para não escrever bytecode (.pyc)
-ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONDONTWRITEBYTECODE=1
 
 # Variável de ambiente para saída não armazenada em buffer
-ENV PYTHONUNBUFFERED 1
+ENV PYTHONUNBUFFERED=1
 
 # Define o diretório de trabalho
 WORKDIR /djangoapp
